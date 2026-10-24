@@ -1,0 +1,527 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(237, 228, 228);
+    font-family: sans-serif;
+}
+
+/* --- HEADER VA NAVIGATSIYA --- */
+
+.chiziq {
+    padding: 12px 40px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
+}
+
+.logo-link {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+}
+
+.logo img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #ccff00;
+    border: none;
+    padding: 5px;
+    object-fit: contain;
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+.uzum {
+    color: #6c2bd9;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 1.1;
+    white-space: nowrap;
+}
+
+/* --- KATALOG (DETAILS / SUMMARY) --- */
+
+.catalog-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.catalog-wrapper summary::-webkit-details-marker {
+    display: none;
+}
+
+.catalog-wrapper summary {
+    list-style: none;
+    cursor: pointer;
+}
+
+.katalog-btn {
+    background-color: #7000ff;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    white-space: nowrap;
+    text-decoration: none;
+}
+
+.cat-icon {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+}
+
+/* --- VERTIKAL MENYU --- */
+
+.catalog-menu {
+    position: absolute;
+    top: 55px;
+    left: 0;
+    width: 260px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    padding: 10px 0;
+    z-index: 1000;
+}
+
+.main-categories {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.main-categories li a {
+    display: block;
+    padding: 12px 20px;
+    color: #212121;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.main-categories li a:hover {
+    background-color: #f3e8ff;
+    color: #7000ff;
+}
+
+
+
+.search-box {
+    flex-grow: 1;
+    max-width: 550px;
+}
+
+#search {
+    width: 100%;
+    padding: 12px 20px;
+    font-size: 16px;
+    border: none;
+    background-color: #edeff2;
+    border-radius: 10px;
+    outline: none;
+    color: black;
+}
+
+
+
+.nav-icons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.icon-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #212121;
+    cursor: pointer;
+    white-space: nowrap;
+    text-decoration: none;
+    transition: background-color 0.2s;
+}
+
+.icon-item img {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+}
+
+.icon-item:hover {
+    background-color: #e2e8f0;
+}
+
+
+
+.maishiy-content {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 40px;
+}
+
+.maishiy-content h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #1f2937;
+}
+
+.horizontal-grid-5 {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
+}
+
+.sub-card {
+    background-color: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 25px 15px;
+    text-align: center;
+    text-decoration: none;
+    color: #212121;
+    font-size: 16px;
+    font-weight: 500;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    transition: 0.2s;
+}
+
+.sub-card:hover {
+    background-color: #f3e8ff;
+    color: #7000ff;
+    border-color: #7000ff;
+    transform: translateY(-2px);
+}
+
+
+
+.login-page {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-card {
+    background-color: #ffffff;
+    padding: 35px 30px;
+    border-radius: 16px;
+    width: 100%;
+    max-width: 380px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: #f3f4f6;
+    border: none;
+    font-size: 20px;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    cursor: pointer;
+    color: #4a5568;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-title {
+    font-size: 24px;
+    color: #7000ff;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.modal-card h3 {
+    font-size: 20px;
+    margin-bottom: 25px;
+    color: #1f2937;
+}
+
+.phone-input {
+    width: 100%;
+    padding: 14px;
+    font-size: 16px;
+    border: 1px solid #d1d5db;
+    border-radius: 10px;
+    background-color: #f3f4f6;
+    margin-bottom: 15px;
+    outline: none;
+}
+
+.code-btn {
+    width: 100%;
+    padding: 14px;
+    background-color: #7000ff;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.modal-footer {
+    font-size: 12px;
+    color: #6b7280;
+    line-height: 1.4;
+}
+
+.product-grid-5 {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+
+.product-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: 0.2s;
+}
+
+.product-card:hover {
+    box-shadow: 0 5px 15px rgba(0,0,0,0.12);
+    transform: translateY(-3px);
+}
+
+.product-img-box {
+    width: 100%;
+    height: 180px;
+    background-color: #f3f4f6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.product-info {
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.current-price {
+    font-size: 16px;
+    font-weight: bold;
+    color: #1f2937;
+}
+
+.product-title {
+    font-size: 13px;
+    color: #4b5563;
+    line-height: 1.3;
+    height: 34px;
+    overflow: hidden;
+}
+
+
+.buy-btn {
+    background-color: #7000ff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    width: 100%;
+}
+
+.buy-btn:hover {
+    background-color: #5800cc;
+}
+
+/* MAHSULOTLAR KONTEYNERI (Bir chiziqda, pastga tushmaydi va kattaroq) */
+.product-horizontal-container {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important; /* Kartochkalarni mutlaqo pastga tushirmaydi */
+    justify-content: space-between !important;
+    gap: 15px !important;
+    width: 100% !important;
+    max-width: 1400px !important; /* Ekran bo'ylab kattaroq yoyilishi uchun */
+    margin: 0 auto !important;
+    padding: 10px 0 20px 0;
+}
+
+/* KARTOCHKALAR (Kattalashtirilgan va bir chiziqda sig'adigan) */
+.product-card {
+    flex: 1 1 0px !important; /* Ekran kengligiga qarab 5 tasini teng va katta qilib taqsimlaydi */
+    min-width: 220px !important;
+    background-color: #ffffff;
+    border-radius: 16px;
+    padding: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.product-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* RASM QISMI (Kattaroq balandlikda) */
+.product-img-box {
+    position: relative;
+    width: 100%;
+    height: 220px !important; /* Rasmlar kattalashtirildi */
+    background-color: #f3f4f6;
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* SARALANGANLAR YURAKCHASI */
+.wishlist-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: rgba(255, 255, 255, 0.85);
+    border: none;
+    border-radius: 50%;
+    width: 34px;
+    height: 34px;
+    font-size: 18px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #4b5563;
+    transition: 0.2s;
+    z-index: 2;
+}
+
+.wishlist-btn:hover {
+    background: #ffffff;
+    color: #ef4444;
+}
+
+/* MATN SHRIFTLARI VA YORLIQLAR */
+.current-price {
+    font-size: 17px !important;
+    font-weight: bold;
+    color: #1f2937;
+}
+
+.old-price {
+    font-size: 13px !important;
+    color: #9ca3af;
+    text-decoration: line-through;
+}
+
+.installment-badge {
+    display: inline-block;
+    background-color: #fffd00;
+    color: #1f2937;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 3px 6px;
+    border-radius: 6px;
+    width: fit-content;
+    margin: 4px 0;
+}
+
+.product-title {
+    font-size: 13px !important;
+    color: #374151;
+    line-height: 1.3;
+    height: 34px;
+    overflow: hidden;
+    margin-bottom: 6px;
+}
+
+.rating-box {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+.star {
+    color: #fbbf24;
+}
+
+.rating-num {
+    font-weight: bold;
+    color: #1f2937;
+}
+
+.reviews {
+    color: #9ca3af;
+}
+
+/* TUGMA */
+.buy-btn {
+    background-color: #7000ff;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 12px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    width: 100%;
+}
+
+.buy-btn:hover {
+    background-color: #5800cc;
+}
